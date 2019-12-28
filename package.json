@@ -1,0 +1,16 @@
+{
+  "name": "socommujs-plugins",
+  "version": "1.0.0",
+  "description": "socommujs plugins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "socommu",
+    "plugins",
+    "server"
+  ],
+  "author": "Christoph Ehlers <Christoph.Ehlers1988@gmx.de>",
+  "license": "ISC"
+}
