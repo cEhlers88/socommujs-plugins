@@ -12,5 +12,8 @@
     "server"
   ],
   "author": "Christoph Ehlers <Christoph.Ehlers1988@gmx.de>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.1.1"
+  }
 }
