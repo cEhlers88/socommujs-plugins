@@ -1,25 +1,25 @@
 import Serverplugin from "socommujs/dist/core/Serverplugin";
-import {serverevent} from "socommujs/dist/core/enums";
+import {EServerEvent} from "socommujs/dist/core/enums";
 import {getServereventString} from "socommujs/dist/core/utils";
 import Engine from "terminal-scene/dist/Engine";
 
 export default class extends Serverplugin {
     protected TermEngine:Engine=new Engine();
     private updateHandle:any=null;
-    private updateInterval:number=500;
+    private updateInterval:number=200;
 
     constructor() {
         super();
         this.setName('TerminalPlugin')
     }
-    getListenEvents(): serverevent[] {
+    getListenEvents(): EServerEvent[] {
         return [
-            serverevent.clientWillConnect
+            EServerEvent.clientWillConnect
         ];
     }
-    handleEvent(event: serverevent, eventProps?: unknown): void {
+    handleEvent(event: EServerEvent, eventProps?: unknown): void {
         switch (event) {
-            case serverevent.serverStart:
+            case EServerEvent.serverStart:
                     if(this.updateHandle){clearInterval(this.updateHandle);}
                     this.updateHandle = setInterval(()=>{
                         this.TermEngine.update();

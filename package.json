@@ -15,5 +15,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^13.1.1"
-  }
+  },
+  "dependencies": {
+    "socommujs": "^2.0.3"
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
