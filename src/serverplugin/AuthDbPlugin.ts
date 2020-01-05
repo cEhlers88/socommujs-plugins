@@ -1,19 +1,11 @@
-import Serverplugin from "socommujs/dist/core/Serverplugin";
-import {EServerEvent} from "socommujs/dist/core/enums";
+import AuthPlugin from "socommujs/dist/serverplugin/AuthPlugin";
 
-export default class extends Serverplugin {
+export default class extends AuthPlugin {
     constructor() {
         super();
         this.setName('AuthDbPlugin');
     }
-    getListenEvents(): EServerEvent[] {
-        return [];
+    public checkLogin(username: string, password: string): boolean {
+        return false;
     }
-
-    handleEvent(event: EServerEvent, eventProps?: unknown): void {
-    }
-
-    run(data?: unknown): void {
-    }
-
 }
