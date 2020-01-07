@@ -1,19 +1,21 @@
 import Serverplugin from "socommujs/dist/core/Serverplugin";
-import {EServerEvent} from "socommujs/dist/core/enums";
+import {EServerEvent} from "socommujs/dist/lib/enums";
 
 export default class extends Serverplugin {
     constructor() {
         super();
         this.setName('ChatPlugin');
     }
-    getListenEvents(): EServerEvent[] {
+    public getListenEvents(): EServerEvent[] {
         return [];
     }
 
-    handleEvent(event: EServerEvent, eventProps?: unknown): void {
+    public handleEvent(event: EServerEvent, eventProps?: unknown): void {
+        const doNothing=true;
     }
 
-    run(data?: unknown): void {
+    public run(data?: unknown): void {
+        const doNothing=true;
     }
 
 }
