@@ -1,5 +1,5 @@
 import Serverplugin from "socommujs/dist/core/Serverplugin";
-import {EServerEvent} from "socommujs/dist/core/enums";
+import {EServerEvent} from "socommujs/dist/lib/enums";
 import {getServereventString} from "socommujs/dist/core/utils";
 import Engine from "terminal-scene/dist/Engine";
 

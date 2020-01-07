@@ -1,5 +1,5 @@
 import Serverplugin from "socommujs/dist/core/Serverplugin";
-import {EServerEvent} from "socommujs/dist/core/enums";
+import {EServerEvent} from "socommujs/dist/lib/enums";
 
 export default class extends Serverplugin {
     constructor() {
