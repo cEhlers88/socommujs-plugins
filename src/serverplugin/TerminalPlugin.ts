@@ -1,6 +1,6 @@
 import Serverplugin from "socommujs/dist/core/Serverplugin";
-import {EServerEvent} from "socommujs/dist/lib/enums";
 import {getServereventString} from "socommujs/dist/core/utils";
+import {EServerEvent} from "socommujs/dist/lib/enums";
 import Engine from "terminal-scene/dist/Engine";
 
 export default class extends Serverplugin {
@@ -12,12 +12,12 @@ export default class extends Serverplugin {
         super();
         this.setName('TerminalPlugin')
     }
-    getListenEvents(): EServerEvent[] {
+    public getListenEvents(): EServerEvent[] {
         return [
             EServerEvent.clientWillConnect
         ];
     }
-    handleEvent(event: EServerEvent, eventProps?: unknown): void {
+    public handleEvent(event: EServerEvent, eventProps?: unknown): void {
         switch (event) {
             case EServerEvent.serverStart:
                     if(this.updateHandle){clearInterval(this.updateHandle);}
@@ -27,7 +27,7 @@ export default class extends Serverplugin {
                 break;
         }
     }
-    run(data?: unknown): void {
-
+    public run(data?: unknown): void {
+        const doNothing=true;
     }
 }

@@ -6,14 +6,16 @@ export default class extends Serverplugin {
         super();
         this.setName('ChatbotPlugin');
     }
-    getListenEvents(): EServerEvent[] {
+    public getListenEvents(): EServerEvent[] {
         return [];
     }
 
-    handleEvent(event: EServerEvent, eventProps?: unknown): void {
+    public handleEvent(event: EServerEvent, eventProps?: unknown): void {
+        const doNothing=true;
     }
 
-    run(data?: unknown): void {
+    public run(data?: unknown): void {
+        const doNothing=true;
     }
 
 }

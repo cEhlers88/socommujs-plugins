@@ -1,5 +1,4 @@
 import mysql from "mysql";
-import repository from "../repository/repository";
 
 export default class {
     private connection: mysql.Connection | undefined;
@@ -8,10 +7,6 @@ export default class {
     private password: string = "";
     private username: string = "";
 
-    public createRepository(type:repository):repository{
-
-        return type;
-    }
     public close(){
         if(this.connection){
             this.connection.destroy();
@@ -23,6 +18,7 @@ export default class {
                        password?: string,
                        username?: string
                    } = {}, resultCallback: ((err?: mysql.MysqlError) => void) = () => {
+                        return null;
                    }
     ) {
         const self = this;
@@ -30,8 +26,8 @@ export default class {
             self.connection = mysql.createConnection({
                 database: this.database,
                 host: this.hostname,
-                user: this.username,
-                password: this.password
+                password: this.password,
+                user: this.username
             });
         }
         doConnect();
