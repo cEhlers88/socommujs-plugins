@@ -4,6 +4,7 @@
   "description": "socommujs plugins",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "test": "npm run jest",
     "jest": "jest --config jestconfig.json",
     "lint": "tslint -p tsconfig.json",
